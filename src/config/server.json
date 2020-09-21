@@ -1,0 +1,13 @@
+{
+    "port": 8000,
+    "secret": "super-secret-key",
+    "saltRound": 10,
+    "graphql": {
+        "endpoint": "/___graphql",
+        "ide": true,
+        "pretty": true
+    },
+    "upload": {
+        "endpoint": "/upload"
+    }
+}
