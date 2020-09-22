@@ -6,7 +6,7 @@ import databaseConnection from './database'
 
 const models = {
     User: databaseConnection.import('../modules/user/model'),
-    // Topics: databaseConnection.import('../modules/topic/model')
+    Category: databaseConnection.import('../modules/category/model')
 }
 
 Object.keys(models).forEach(modelName => {
