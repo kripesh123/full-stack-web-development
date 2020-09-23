@@ -1,22 +1,23 @@
 // Imports
-import Sequelize from 'sequelize'
+import Sequelize from 'sequelize';
 
-// App Import 
-import databaseConnection from './database'
+// App Import
+import databaseConnection from './database';
 
 const models = {
-    User: databaseConnection.import('../modules/user/model'),
-    Category: databaseConnection.import('../modules/category/model'),
-    SubCategory: databaseConnection.import('../modules/sub-category/model')
-}
+  User: databaseConnection.import('../modules/user/model'),
+  Category: databaseConnection.import('../modules/category/model'),
+  SubCategory: databaseConnection.import('../modules/sub-category/model'),
+  Article: databaseConnection.import('../modules/article/model'),
+};
 
-Object.keys(models).forEach(modelName => {
-    if(models[modelName].associate) {
-        models[modelName].associate(models)
-    }
-})
+Object.keys(models).forEach((modelName) => {
+  if (models[modelName].associate) {
+    models[modelName].associate(models);
+  }
+});
 
-models.sequelize = databaseConnection
-models.Sequelize = Sequelize
+models.sequelize = databaseConnection;
+models.Sequelize = Sequelize;
 
-export default models
+export default models;
