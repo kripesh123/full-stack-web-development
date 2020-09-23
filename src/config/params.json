@@ -14,5 +14,43 @@
                 "name": "Female"
             }
         }
+    },
+    "article": {
+        "types": {
+            "blog": {
+                "id": 1,
+                "name": "Blog"
+            },
+            "review": {
+                "id": 2,
+                "name": "Review"
+            },
+            "list": {
+                "id": 3,
+                "name":"List"
+            }
+        },
+        "featured": {
+            "home":{
+                "id": 1,
+                "name": "Home"
+            },
+            "main":{
+                "id": 1,
+                "name": "Main"
+            },
+            "primary":{
+                "id": 1,
+                "name": "Primary"
+            },
+            "secondary":{
+                "id": 4,
+                "name": "Secondary"
+            },
+            "non":{
+                "id": 5,
+                "name": "Non"
+            }
+        }
     }
 }
