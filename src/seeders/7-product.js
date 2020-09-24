@@ -13,7 +13,7 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/wallet-female.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'Wallet for Men',
@@ -23,7 +23,7 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/wallet-male.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'Earring for Women',
@@ -33,7 +33,7 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/earring-female.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'Earring for Men',
@@ -43,7 +43,7 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/earring-male.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'T-Shirt for Women - Black',
@@ -53,7 +53,7 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/t-shirt-female-1.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'T-Shirt for Women - Grey',
@@ -63,7 +63,7 @@ module.exports = {
         gender: params.user.gender.female.id,
         image: '/images/stock/t-shirt-female-2.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'T-Shirt for Men - White',
@@ -73,7 +73,7 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/t-shirt-male-1.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
       {
         name: 'T-Shirt for Men - Grey',
@@ -83,12 +83,12 @@ module.exports = {
         gender: params.user.gender.male.id,
         image: '/images/stock/t-shirt-male-2.jpg',
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
       },
-    ])
+    ]);
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('products', null, {});
-  }
-}
+  },
+};
