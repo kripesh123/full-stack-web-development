@@ -52,5 +52,59 @@
                 "name": "Non"
             }
         }
+    },
+    "topic": {
+        "types": {
+            "sensational": {
+                "id": 1,
+                "name": "Sensational"
+            },
+            "aggressive": {
+                "id": 2,
+                "name": "Aggressive"
+            },
+            "adult": {
+                "id": 3,
+                "name": "Adult"
+            },
+            "non": {
+                "id": 4,
+                "name": "non"
+            }
+        },
+        "featured": {
+            "trending": {
+                "id": 1,
+                "name": "Trending"
+            },
+            "trendingThisWeek": {
+                "id": 2,
+                "name": "Trending this week"
+            },
+            "trendingThisMonth": {
+                "id": 3,
+                "name": "Trending this month"
+            },
+            "main": {
+                "id": 4,
+                "name": "Main"
+            },
+            "non": {
+                "id": 5,
+                "name": "Non"
+            }
+        }
+    },
+    "product": {
+        "types": {
+            "cloth": {
+                "id": 1,
+                "name": "Cloth"
+            },
+            "accessory": {
+                "id": 2,
+                "name": "Accessories"
+            }
+        }
     }
 }
