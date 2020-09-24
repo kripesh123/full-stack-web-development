@@ -1,6 +1,6 @@
 import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLBoolean } from "graphql";
 
-export const CategoryType = new GraphQLObjectType({
+const CategoryType = new GraphQLObjectType({
     name: 'category',
     description: 'Category Type',
     fields: () => ({
@@ -13,3 +13,5 @@ export const CategoryType = new GraphQLObjectType({
         updatedAt: { type: GraphQLString},
     })
 })
+
+export {CategoryType}

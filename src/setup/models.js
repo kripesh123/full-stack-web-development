@@ -9,6 +9,7 @@ const models = {
   Category: databaseConnection.import('../modules/category/model'),
   SubCategory: databaseConnection.import('../modules/sub-category/model'),
   Article: databaseConnection.import('../modules/article/model'),
+  ArticleCategorize : databaseConnection.import('../modules/article-categorize/model')
 };
 
 Object.keys(models).forEach((modelName) => {
