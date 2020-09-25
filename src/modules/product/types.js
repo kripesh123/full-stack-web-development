@@ -6,9 +6,6 @@ import {
   GraphQLBoolean,
 } from 'graphql';
 
-// App Imports
-import { UserType } from '../user/types';
-
 // Product type
 const ProductType = new GraphQLObjectType({
   name: 'product',
@@ -23,7 +20,6 @@ const ProductType = new GraphQLObjectType({
     image: { type: GraphQLString },
     type: { type: GraphQLInt },
     featured: { type: GraphQLInt },
-    user: { type: UserType },
     isActive: { type: GraphQLBoolean },
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString },

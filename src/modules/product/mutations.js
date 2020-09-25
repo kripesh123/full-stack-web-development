@@ -99,11 +99,6 @@ export const productUpdate = {
       name: 'isActive',
       type: GraphQLBoolean,
     },
-
-    userId: {
-      name: 'userId',
-      type: GraphQLInt,
-    },
   },
   resolve: update,
 };

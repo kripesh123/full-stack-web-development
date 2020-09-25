@@ -10,7 +10,6 @@ import {
   getByType,
   getByFeatured,
   getFurther,
-  getByUser,
   getTypes,
   getFeatured,
 } from './resolvers';
@@ -63,12 +62,6 @@ export const productsFurther = {
     productId: { type: GraphQLInt },
   },
   resolve: getFurther,
-};
-
-// product By user
-export const productsByUser = {
-  type: new GraphQLList(ProductType),
-  resolve: getByUser,
 };
 
 // product Types

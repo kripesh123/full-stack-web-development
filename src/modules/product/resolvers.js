@@ -6,7 +6,6 @@ import models from '../../setup/models';
 export async function getAll() {
   return await models.Product.findAll({
     order: [['id', 'DESC']],
-    include: [{ model: models.User, as: 'user' }],
   });
 }
 
@@ -14,7 +13,6 @@ export async function getAll() {
 export async function getBySlug(parentValue, { slug }) {
   const product = await models.Product.findOne({
     where: { slug },
-    include: [{ model: models.User, as: 'user' }],
   });
 
   if (!product) {
@@ -61,24 +59,9 @@ export async function getFurther(parentValue, { productId }) {
     where: {
       id: { [models.Sequelize.Op.not]: productId },
     },
-    include: [{ model: models.User, as: 'user' }],
     limit: 3,
     order: [[models.Sequelize.fn('RANDOM')]], // mock related products by showing random products
   });
-}
-
-// Get products By User
-export async function getByUser(parentValue, {}, { auth }) {
-  if (auth.isAuthenticated) {
-    return await models.Product.findAll({
-      where: {
-        userId: auth.user.id,
-      },
-      include: [{ model: models.User, as: 'user' }],
-    });
-  } else {
-    throw new Error('Please login to view your products.');
-  }
 }
 
 // Create product
@@ -97,7 +80,6 @@ export async function create(
       type,
       featured,
       isActive,
-      userId: auth.user.id,
     });
   } else {
     throw new Error('Operation denied.');
@@ -107,18 +89,7 @@ export async function create(
 // Update product
 export async function update(
   parentValue,
-  {
-    id,
-    title,
-    slug,
-    description,
-    body,
-    image,
-    type,
-    featured,
-    isActive,
-    userId,
-  },
+  { id, title, slug, description, body, image, type, featured, isActive },
   { auth }
 ) {
   if (
@@ -136,7 +107,6 @@ export async function update(
         type,
         featured,
         isActive,
-        userId,
       },
       { where: { id } }
     );
