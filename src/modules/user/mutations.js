@@ -2,7 +2,7 @@ import { UserType } from './types'
 import { GraphQLString } from 'graphql'
 import { create } from './resolvers'
 
-export const userSignUp = {
+export const userSignup = {
     type: UserType,
     args: {
         name: {
