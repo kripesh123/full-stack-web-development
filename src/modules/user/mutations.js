@@ -1,6 +1,6 @@
 import { UserType } from './types'
 import { GraphQLString } from 'graphql'
-import { create } from './resolvers'
+import { signUp } from './resolvers'
 
 export const userSignup = {
     type: UserType,
@@ -18,5 +18,5 @@ export const userSignup = {
             type: GraphQLString
         }
     },
-    resolve: create
+    resolve: signUp
 }
