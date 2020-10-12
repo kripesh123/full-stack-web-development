@@ -13,6 +13,7 @@ const models = {
     '../modules/article-categorize/model'
   ),
   Product: databaseConnection.import('../modules/product/model'),
+  Topic: databaseConnection.import('../modules/topic/model')
 };
 
 Object.keys(models).forEach((modelName) => {
