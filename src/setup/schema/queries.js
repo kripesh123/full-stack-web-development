@@ -6,6 +6,7 @@ import * as subCategory from '../../modules/sub-category/query';
 import * as article from '../../modules/article/query';
 import * as articleCategorize from '../../modules/article-categorize/query';
 import * as topics from '../../modules/topic/query';
+import * as subscription from '../../modules/subscription/query'
 
 
 const query = new GraphQLObjectType({
@@ -17,7 +18,8 @@ const query = new GraphQLObjectType({
     ...subCategory,
     ...article,
     ...articleCategorize,
-    ...topics
+    ...topics,
+    ...subscription
   },
 });
 

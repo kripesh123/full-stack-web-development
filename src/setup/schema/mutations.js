@@ -4,6 +4,7 @@ import * as user from '../../modules/user/mutations';
 import * as category from '../../modules/category/mutations';
 import * as subCategory from '../../modules/sub-category/mutations';
 import * as article from '../../modules/article/mutations';
+import * as subscription from '../../modules/subscription/mutations';
 
 const mutation = new GraphQLObjectType({
   name: 'mutations',
@@ -13,6 +14,8 @@ const mutation = new GraphQLObjectType({
     ...category,
     ...subCategory,
     ...article,
+    ...subscription
+
   },
 });
 

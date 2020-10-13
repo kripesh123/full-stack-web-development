@@ -13,7 +13,8 @@ const models = {
     '../modules/article-categorize/model'
   ),
   Product: databaseConnection.import('../modules/product/model'),
-  Topic: databaseConnection.import('../modules/topic/model')
+  Topic: databaseConnection.import('../modules/topic/model'),
+  Subscription: databaseConnection.import('../modules/subscription/model')
 };
 
 Object.keys(models).forEach((modelName) => {
